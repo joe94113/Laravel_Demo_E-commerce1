@@ -20,3 +20,7 @@
 3. 需有資料 Validator
 
 4. 需有資料預產生器 Seeder
+
+#### SQL架構
+
+![SQL Scheme](e-commerce.png)
