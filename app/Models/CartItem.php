@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class CartItem extends Model
 {
     use HasFactory;
-    use SoftDeletes;
+    use SoftDeletes;  // 使用軟刪除特性
 
     protected $filable = []; // 白名單(只能更改)
     protected $guarded = []; // 黑名單(不能更改)

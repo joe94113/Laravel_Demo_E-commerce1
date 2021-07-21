@@ -13,14 +13,18 @@
 
 #### 系統功能:
 
-1. 需使用 Eloquent Model 完成功能
+1. 使用 Eloquent Model 完成功能
 
-2. 需使用軟刪除特性
+2. 有使用軟刪除特性
 
-3. 需有資料 Validator
+3. 有資料 Validator
 
-4. 需有資料預產生器 Seeder
+4. 有資料預產生器 Seeder
 
 #### SQL架構
 
 ![SQL Scheme](e-commerce.png)
+
+#### Postman作品DEMO
+
+[Demo Link](https://youtu.be/etI1WYAiy9A) 

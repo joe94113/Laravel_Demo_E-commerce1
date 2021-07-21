@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Validator;
 use App\Http\Requests\UpdateCartItems;
 use App\Models\Cart;
 use App\Models\CartItem;
+use App\Models\Product;
 use phpDocumentor\Reflection\PseudoTypes\True_;
 
 class CartItemsController extends Controller
@@ -54,8 +55,14 @@ class CartItemsController extends Controller
             return response($Validator->errors(), 400);
         }
         $validateData = $Validator->validate();
+
+        $product = Product::find($validateData['product_id']);
+        if(!$product->checkQuantity($validateData['quantity'])){
+            return response($product->title.'數量不足', 400);
+        }
+
         $cart = Cart::find($validateData['cart_id']);
-        $result = $cart->cartItems()->create(['product_id' => $validateData['product_id'],
+        $result = $cart->cartItems()->create(['product_id' => $product->id,
                                             'quantity' => $validateData['quantity']]);
 
         return response()->json($result);
