@@ -21,10 +21,10 @@
 
 4. 有資料預產生器 Seeder
 
+#### Postman作品DEMO
+
+[Youtube Demo Link](https://youtu.be/etI1WYAiy9A) 
+
 #### SQL架構
 
 ![SQL Scheme](e-commerce.png)
-
-#### Postman作品DEMO
-
-[Demo Link](https://youtu.be/etI1WYAiy9A) 
